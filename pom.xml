@@ -3,13 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.calebfroese</groupId>
-    <artifactId>DockerBungee</artifactId>
+    <artifactId>DockerSpigot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <repositories>
         <repository>
-            <id>bungeecord-repo</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
         <repository>
             <id>jitpack.io</id>
@@ -57,31 +57,13 @@
     </build>
 
     <dependencies>
+        <!-- https://www.spigotmc.org/wiki/spigot-maven/#pom-xml -->
+        <!--This adds the Spigot API artifact to the build -->
         <dependency>
-            <groupId>net.md-5</groupId>
-            <artifactId>bungeecord-api</artifactId>
-            <version>1.16-R0.5-SNAPSHOT</version>
-            <type>jar</type>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.17.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.md-5</groupId>
-            <artifactId>bungeecord-api</artifactId>
-            <version>1.16-R0.5-SNAPSHOT</version>
-            <type>javadoc</type>
-            <scope>provided</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.github.docker-java/docker-java -->
-        <dependency>
-            <groupId>com.github.docker-java</groupId>
-            <artifactId>docker-java</artifactId>
-            <version>3.2.12</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.github.docker-java/docker-java-transport-httpclient5 -->
-        <dependency>
-            <groupId>com.github.docker-java</groupId>
-            <artifactId>docker-java-transport-httpclient5</artifactId>
-            <version>3.2.12</version>
         </dependency>
 
         <!-- WarpSystem https://github.com/CodingAir/WarpSystem-API -->
@@ -90,6 +72,9 @@
             <artifactId>WarpSystem-API</artifactId>
             <version>5.0.6</version>
             <scope>provided</scope>
+            <!-- <scope>system</scope>
+            <version>5.0.5</version>
+            <systemPath>${project.basedir}/WarpSystem_v5.0.5_Hotfix-5.jar</systemPath> -->
         </dependency>
         <!-- Important: This API is necessary for compiling your plugin -->
         <dependency>

@@ -1,5 +1,5 @@
-name: DockerBungee
-main: com.calebfroese.dockerbungee.DockerBungeePlugin
+name: DockerSpigot
+main: com.calebfroese.dockerbungee.DockerSpigotPlugin
 version: 1.0
 author: Caleb Froese
-depend: [WarpSystem-API, CodingAPI]
+depend: [WarpSystem]
