@@ -1,5 +1,5 @@
-name: DockerSpigot
-main: com.calebfroese.dockerbungee.DockerSpigotPlugin
+name: Credits
+main: com.calebfroese.dockerbungee.CreditsPlugin
 version: 1.0
 author: Caleb Froese
-depend: [WarpSystem]
+depend: [ProtocolLib]
