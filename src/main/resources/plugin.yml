@@ -1,5 +1,4 @@
-name: Credits
-main: com.calebfroese.dockerbungee.CreditsPlugin
+name: Mendont
+main: com.calebfroese.mendont.MendontPlugin
 version: 1.0
 author: Caleb Froese
-depend: [ProtocolLib]

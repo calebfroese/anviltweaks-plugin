@@ -3,18 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.calebfroese</groupId>
-    <artifactId>Credits</artifactId>
+    <artifactId>Mendont</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <repositories>
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-
-        <repository>
-            <id>dmulloy2-repo</id>
-            <url>https://repo.dmulloy2.net/repository/public/</url>
         </repository>
     </repositories>
 
@@ -40,12 +35,6 @@
             <artifactId>spigot-api</artifactId>
             <version>1.17.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.comphenix.protocol</groupId>
-            <artifactId>ProtocolLib</artifactId>
-            <version>4.7.0</version>
         </dependency>
     </dependencies>
 </project>
