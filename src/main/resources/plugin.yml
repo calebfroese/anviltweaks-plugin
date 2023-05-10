@@ -2,3 +2,4 @@ name: Mendont
 main: com.calebfroese.mendont.MendontPlugin
 version: 1.0
 author: Caleb Froese
+api-version: 1.14
