@@ -1,8 +1,6 @@
-package com.calebfroese.mendont;
+package com.calebfroese.anviltweaks;
 
 import org.bukkit.Material;
-import org.bukkit.Server;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -10,17 +8,11 @@ import org.bukkit.event.inventory.PrepareAnvilEvent;
 import org.bukkit.inventory.AnvilInventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.Damageable;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.Repairable;
 
-public class InventoryMoveItem implements Listener {
-  Server s;
-  MendontPlugin plugin;
-
-  public InventoryMoveItem(MendontPlugin plugin, Server server) {
-    this.plugin = plugin;
-    this.s = server;
-  }
+/**
+ * Makes tridents repairable with prismarine shards
+ */
+public class TridentRepair implements Listener {
 
   @EventHandler
   public void onTridentAnvilPrepare(PrepareAnvilEvent event) {
@@ -72,27 +64,5 @@ public class InventoryMoveItem implements Listener {
     trident.setItemMeta(meta);
     event.getWhoClicked().getInventory().addItem(trident);
     inventory.clear();
-  }
-
-  @EventHandler
-  public void on(InventoryClickEvent event) {
-    if (!(event.getInventory() instanceof AnvilInventory)) {
-      return;
-    }
-
-    if (event.getWhoClicked() instanceof Player) {
-      ItemStack item = event.getCurrentItem();
-      if (item == null || !(item.getItemMeta() instanceof Repairable)) {
-        return;
-      }
-
-      Repairable repairable = (Repairable) item.getItemMeta();
-      if (repairable.getRepairCost() > 15) {
-        repairable.setRepairCost(15);
-        item.setItemMeta((ItemMeta) repairable);
-        event.setCurrentItem(item);
-      }
-    }
-
   }
 }

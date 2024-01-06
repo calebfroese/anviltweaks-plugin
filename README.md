@@ -1,4 +1,4 @@
-Disables Mending
+Anvil Tweaks
 
 ```mvn install```
 
